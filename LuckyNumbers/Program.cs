@@ -10,20 +10,34 @@ namespace LuckyNumbers
     {
         static void Main(string[] args)
         {
-
-            //Define Six input number array
+            //Introduction
+            int jackpot = 6000;
+            Console.WriteLine("Welcome to Lucky NUmbers!!!");
+            Console.WriteLine("Today's Jackpot total is: " + "$" + jackpot);
+            //Define Six input number array and 
             int[] sixNumb = new int[5];
+            
 
-            //User input
+            //User input and populating arrays
             Console.WriteLine("Please enter the starting number:");
             int lowNumb = int.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the ending number:");
             int highNumb = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter a number between: " + lowNumb + " and " + highNumb);
+            Console.WriteLine("Please enter six numbers between: " + lowNumb + " and " + highNumb);
             sixNumb[0] = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter a number between: " + lowNumb + " and " + highNumb);
+            if (sixNumb[0] < lowNumb)
+            {
+                Console.WriteLine("Number too low! Please enter a number between: " + lowNumb + " and " + highNumb);
+                sixNumb[0] = int.Parse(Console.ReadLine());
+            }
+            if (sixNumb[0] > highNumb)
+            {
+                Console.WriteLine("Number too high! Please enter a number between: " + lowNumb + " and " + highNumb);
+                sixNumb[0] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Please enter a second number between: " + lowNumb + " and " + highNumb);
             sixNumb[1] = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter a number between: " + lowNumb + " and " + highNumb);
+            Console.WriteLine("Please enter a third number between: " + lowNumb + " and " + highNumb);
             sixNumb[2] = int.Parse(Console.ReadLine());
             Console.WriteLine("Please enter a number between: " + lowNumb + " and " + highNumb);
             sixNumb[3] = int.Parse(Console.ReadLine());
