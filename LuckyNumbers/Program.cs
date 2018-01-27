@@ -46,7 +46,7 @@ namespace LuckyNumbers
             for (int i = 0; i < rArray.Length; i++)
             {
                 rArray[i] = r.Next(lowNumb, highNumb);
-                Console.WriteLine(rArray[i]);
+                Console.WriteLine("Lucky Number:" + rArray[i]);
             }
 
 
