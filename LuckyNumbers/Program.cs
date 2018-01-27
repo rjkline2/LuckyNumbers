@@ -14,8 +14,6 @@ namespace LuckyNumbers
             int jackpot = 6000;
             Console.WriteLine("Welcome to Lucky Numbers!!!");
             Console.WriteLine("Today's Jackpot total is: " + "$" + jackpot);
-            //Define six input number array and 
-            //int[] sixNumb = new int[5];
             
             //User input and populating arrays
             Console.WriteLine("Please enter the starting number:");
@@ -43,7 +41,7 @@ namespace LuckyNumbers
 
             //Random Number Gen
             Random r = new Random();
-            int[] rArray = new int[25];
+            int[] rArray = new int[6];
 
             for (int i = 0; i < rArray.Length; i++)
             {
