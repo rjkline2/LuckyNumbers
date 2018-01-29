@@ -11,7 +11,8 @@ namespace LuckyNumbers
         static void Main(string[] args)
         {
             //Enter or exit logic
-            string userChoice = ();
+            int numbCompare = 0;
+            string userChoice;
             //while (userChoice != "no")
             do
             {
@@ -68,59 +69,52 @@ namespace LuckyNumbers
                 {
                     for (int k = 0; k < rArray.Length; k++)
                     {
-                        bool numbCompare = (sixNumb[i] == rArray[i]);
-                        if (numbCompare = (sixNumb[i] == rArray[i])) ;
-
-                        {
-                            int winCount = 0;
-                            while (numbCompare == true)
-                            {
-                                Console.WriteLine("You guessed {0} numbers correctly!", winCount);
-                                //Winnings calculation
-                                //int winningCalc = (jackpot / winCount);
-                                //Console.WriteLine("You won $" + winningCalc + "!");
-                                switch (winCount)
-                                {
-                                    case 1:
-                                        Console.WriteLine("You won $1000!");
-                                        break;
-                                    case 2:
-                                        Console.WriteLine("You won $2000!");
-                                        break;
-                                    case 3:
-                                        Console.WriteLine("You won $3000!");
-                                        break;
-                                    case 4:
-                                        Console.WriteLine("You won $4000!");
-                                        break;
-                                    case 5:
-                                        Console.WriteLine("You won $5000!");
-                                        break;
-                                    case 6:
-                                        Console.WriteLine("You won $6000!");
-                                        break;
-
-                                    default:
-                                        Console.WriteLine("You won $0!");
-                                        break;
-                                }
-                            }
-                        }
+                        // int numbCompare = (numbCompare++);
+                        if (sixNumb[i] == rArray[i])
+                        { numbCompare++; }
                     }
+                }
+                        if (numbCompare > 0)
+                        {
+                           
+                                Console.WriteLine("You guessed {0} numbers correctly!", numbCompare);
+                                //Winnings calculation
+                                int winningCalc = (jackpot / numbCompare);
+                                Console.WriteLine("You won $" + winningCalc + "!");
+                                //switch (winCount)
+                                //{
+                                //    case 1:
+                                //        Console.WriteLine("You won $1000!");
+                                //        break;
+                                //    case 2:
+                                //        Console.WriteLine("You won $2000!");
+                                //        break;
+                                //    case 3:
+                                //        Console.WriteLine("You won $3000!");
+                                //        break;
+                                //    case 4:
+                                //        Console.WriteLine("You won $4000!");
+                                //        break;
+                                //    case 5:
+                                //        Console.WriteLine("You won $5000!");
+                                //        break;
+                                //    case 6:
+                                //        Console.WriteLine("You won $6000!");
+                                //        break;
+
+                                //    default:
+                                //        Console.WriteLine("You won $0!");
+                                //        break;
+                                //}
+                            
+                        
+                    
                 }
 
                 //Oppotunity to play again
                 Console.WriteLine("Do you want to play again? Type 'yes' OR type 'no' to leave.");
                 userChoice = (Console.ReadLine());
-                //if (userChoice.ToLower().Equals("yes"))
-                //{
-                //    //execute what?
-                //}
-                //if (userChoice.ToLower().Equals("no"))
-                //{
-                //    Console.WriteLine("Thanks for playing!");
-                //    //exit code here
-                //}
+
             } while (userChoice != "no");
         }
     }
