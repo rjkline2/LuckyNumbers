@@ -20,7 +20,7 @@ namespace LuckyNumbers
             int lowNumb = int.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the ending number:");
             int highNumb = int.Parse(Console.ReadLine());
-            int[] sixNumb = new int[5];
+            int[] sixNumb = new int[6];
             for (int i = 0; i < sixNumb.Length; i++)
             {
                 Console.WriteLine("Please enter six numbers between: " + lowNumb + " and " + highNumb);
@@ -35,9 +35,16 @@ namespace LuckyNumbers
                     Console.WriteLine("Number too high! Please enter a number between: " + lowNumb + " and " + highNumb);
                     sixNumb[i] = int.Parse(Console.ReadLine());
                 }
+                Console.WriteLine(sixNumb[0]);
+            Console.WriteLine(sixNumb[1]);
+            Console.WriteLine(sixNumb[2]);
+            Console.WriteLine(sixNumb[3]);
+            Console.WriteLine(sixNumb[4]);
+            Console.WriteLine(sixNumb[5]);
+            Console.WriteLine(sixNumb[6]);
             }
+            // Console.WriteLine(sixNumb[0] + sixNumb[1], sixNumb[2], sixNumb[3], sixNumb[4], sixNumb[5]);
             
-           
 
             //Random Number Gen
             Random r = new Random();
@@ -46,9 +53,10 @@ namespace LuckyNumbers
             for (int i = 0; i < rArray.Length; i++)
             {
                 rArray[i] = r.Next(lowNumb, highNumb);
-                Console.WriteLine("Lucky Number:" + rArray[i]);
+                Console.WriteLine("Lucky Number: " + rArray[i]);
             }
 
+            //Comparison of User numbers vs. Random Numbers
 
 
 
